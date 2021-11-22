@@ -1,11 +1,13 @@
 import './App.css';
+import InfoCard from './components/InfoCard';
+import MainContainer from './components/MainContainer';
 import NavBar from './components/NavBarTW';
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex flex-col h-screen">
 
-      <NavBar></NavBar>
+      <NavBar />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -20,6 +22,22 @@ function App() {
           Learn React
         </a>
       </header> */}
+      <section className="max-h-screen overflow-y-scroll snap snap-y snap-mandatory">
+
+        <MainContainer
+          title="Kyle Cardwell"
+          sectionName="top"
+        />
+        <MainContainer
+          title="Projects"
+          sectionName="Projects"
+        />
+        <MainContainer
+          title="About"
+          sectionName="About"
+        />
+
+      </section>
     </div>
   );
 }
