@@ -5,10 +5,10 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 // import kyleProfilePic from './images/kyleProfilePic.jpg'
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Projects', href: '/projects', current: false },
-  { name: 'About', href: '/about', current: false },
-  { name: 'Contact', href: '/contact', current: false },
+  { name: 'Home', href: '#top', current: true },
+  { name: 'Projects', href: '#Projects', current: false },
+  { name: 'About', href: '#About', current: false },
+  { name: 'Contact', href: '#Contact', current: false },
 ]
 
 function classNames(...classes) {
@@ -17,7 +17,7 @@ function classNames(...classes) {
 
 const NavBar = () => {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800 object-left-top w-full fixed z-50">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
