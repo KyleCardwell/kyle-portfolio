@@ -1,7 +1,8 @@
 import './App.css';
 import InfoCard from './components/InfoCard';
 import MainContainer from './components/MainContainer';
-import NavBar from './components/NavBarTW';
+import NavBar from './components/NavBarTW.js';
+import { projectData } from './components/projectData';
 
 function App() {
   return (
@@ -24,18 +25,19 @@ function App() {
       </header> */}
       <section className="max-h-screen overflow-y-scroll snap snap-y snap-mandatory">
 
-        <MainContainer
+        {/* <MainContainer
           title="Kyle Cardwell"
           sectionName="top"
-        />
+        /> */}
         <MainContainer
           title="Projects"
           sectionName="Projects"
+          data={projectData}
         />
-        <MainContainer
+        {/* <MainContainer
           title="About"
           sectionName="About"
-        />
+        /> */}
 
       </section>
     </div>
