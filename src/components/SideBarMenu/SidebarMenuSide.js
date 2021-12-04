@@ -30,19 +30,19 @@ export default function SidebarMenuSide(props) {
             Home
           </a>
           <a
-            href="#about"
-            className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
-          >
-            About
-          </a>
-          <a
-            href="#projects"
+            href="#Projects"
             className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
           >
             Projects
           </a>
           <a
-            href="#contact"
+            href="#About"
+            className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
+          >
+            About
+          </a>
+          <a
+            href="#Contact"
             className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
           >
             Contact

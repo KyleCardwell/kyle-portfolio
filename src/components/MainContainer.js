@@ -5,7 +5,7 @@ import InfoCard from './InfoCard';
 const MainContainer = (props) => {
     
     return (
-        <div className="h-screen flex bg-yellow-100 snap-start" id={props.sectionName}>
+        <div className="flex-row h-screen md:flex bg-yellow-100 snap-start" id={props.sectionName}>
             <InfoCard
                 title={props.title}
             />
