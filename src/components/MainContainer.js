@@ -9,7 +9,7 @@ const MainContainer = (props) => {
             <InfoCard
                 title={props.title}
             />
-            <DisplayCard />
+            <DisplayCard data={props.data} component={props.component}/>
         </div>
     )
 }
