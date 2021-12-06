@@ -6,6 +6,7 @@ import ProjectsScroll from './components/ProjectsScroll';
 import MobileMenuTop from './components/SideBarMenu/MobileMenuTop';
 import SidebarMenuSide from './components/SideBarMenu/SidebarMenuSide';
 import TitleCard from './components/TitleCard';
+import * as Scroll from 'react-scroll'
 
 function App() {
 
@@ -33,7 +34,7 @@ function App() {
 
         <MainContainer
           title="Kyle Cardwell"
-          sectionName="top"
+          sectionName="Top"
           component={TitleCard}
         />
         <MainContainer

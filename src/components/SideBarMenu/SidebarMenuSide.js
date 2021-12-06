@@ -4,7 +4,7 @@ export default function SidebarMenuSide(props) {
 
   return (
     // {/* Sidebar */}
-      <div className={`sidebar text-right bg-blue-800 text-blue-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform ${props.showSideBar ? "-translate-x-full " : ""}md:relative md:translate-x-0 z-50 transition duration-200 ease-in-out`}>
+      <div className={`sidebar bg-blue-800 text-blue-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform ${props.showSideBar ? "-translate-x-full " : ""}md:relative md:translate-x-0 z-50 transition duration-200 ease-in-out`}>
         <a href="#" className="text-white flex items-center space-x-2">
           <svg
             className="w-8 h-8"
@@ -22,7 +22,7 @@ export default function SidebarMenuSide(props) {
           </svg>
           <span className="text-2xl font-bold">Kyle's Menu</span>
         </a>
-        <nav>
+        <nav className="text-right">
           <a
             href="#Top"
             className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
@@ -49,6 +49,5 @@ export default function SidebarMenuSide(props) {
           </a>
         </nav>
       </div>
-    //   {/* <div className="flex-1 p-10 text-2xl font-bold">content goes here</div> */}
   );
 }

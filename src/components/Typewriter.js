@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 
 const words = [
     {
-        topic:"LEGO",
+        topic:"LEGO.",
         message:"Usually spaceships... mostly Star Wars"
     },
     {
-        topic:"food",
+        topic:"food.",
         message:"commonly known as 'cooking'"
     },
     {
-        topic:"websites",
+        topic:"websites.",
         message:"That's probably why you're at my site..."
     },
 ]
@@ -62,8 +62,8 @@ const Typewriter = (props) => {
     return(
         <div className="w-full">
 
-            <div className="flex w-full">
-                <div className="w-1/3 text-right">
+            <div className="flex w-full text-6xl">
+                <div className="w-1/2 text-right">
                     <h2>
                         I build&nbsp;
                     </h2>
@@ -74,8 +74,8 @@ const Typewriter = (props) => {
                 </h2>
         
             </div>
-            <div className="text-center">
-                {`(${words[index].message})`}
+            <div className="text-center text-3xl pt-5 h-2.5">
+                {subIndex === words[index].topic.length ? `(${words[index].message})` : " " }
             </div>
             
         </div>
