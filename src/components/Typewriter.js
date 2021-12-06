@@ -62,7 +62,7 @@ const Typewriter = (props) => {
     return(
         <div className="w-full">
 
-            <div className="flex w-full text-6xl">
+            <div className="flex w-full text-3xl md:text-6xl">
                 <div className="w-1/2 text-right">
                     <h2>
                         I build&nbsp;
@@ -74,7 +74,7 @@ const Typewriter = (props) => {
                 </h2>
         
             </div>
-            <div className="text-center text-3xl pt-5 h-2.5">
+            <div className="text-center text-2xl md:text-3xl pt-5 h-2.5">
                 {subIndex === words[index].topic.length ? `(${words[index].message})` : " " }
             </div>
             
