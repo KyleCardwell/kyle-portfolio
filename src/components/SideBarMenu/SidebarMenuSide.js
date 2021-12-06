@@ -20,35 +20,34 @@ export default function SidebarMenuSide(props) {
               d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
             />
           </svg>
-          <span className="text-2xl font-etrabold">Kyle's Menu</span>
+          <span className="text-2xl font-bold">Kyle's Menu</span>
         </a>
-        <nav>
+        <nav className="text-right">
           <a
-            href="#top"
+            href="#Top"
             className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
           >
             Home
           </a>
           <a
-            href="#about"
-            className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
-          >
-            About
-          </a>
-          <a
-            href="#projects"
+            href="#Projects"
             className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
           >
             Projects
           </a>
           <a
-            href="#contact"
+            href="#About"
+            className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
+          >
+            About
+          </a>
+          <a
+            href="#Contact"
             className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
           >
             Contact
           </a>
         </nav>
       </div>
-    //   {/* <div className="flex-1 p-10 text-2xl font-bold">content goes here</div> */}
   );
 }

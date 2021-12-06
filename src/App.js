@@ -1,17 +1,14 @@
 import { useState } from 'react';
 import './App.css';
-// import InfoCard from './components/InfoCard';
 import MainContainer from './components/MainContainer';
-// import NavBar from './components/NavBarTW.js';
 import { projectData } from './components/projectData';
 import ProjectsScroll from './components/ProjectsScroll';
-// import SidebarMenu from './components/SidebarMenu';
 import MobileMenuTop from './components/SideBarMenu/MobileMenuTop';
 import SidebarMenuSide from './components/SideBarMenu/SidebarMenuSide';
+import TitleCard from './components/TitleCard';
+import * as Scroll from 'react-scroll'
 
 function App() {
-
-  // const sidebar = document.querySelector('.sidebar')
 
   const [showSideBar, setShowSideBar] = useState(true)
 
@@ -35,22 +32,22 @@ function App() {
 
       <section className="max-h-screen overflow-y-scroll snap snap-y snap-mandatory">
 
-        {/* <MainContainer
+        <MainContainer
           title="Kyle Cardwell"
-          sectionName="top"
-          component={""}
-        /> */}
+          sectionName="Top"
+          component={TitleCard}
+        />
         <MainContainer
           title="Projects"
           sectionName="Projects"
           data={projectData}
           component={ProjectsScroll}
         />
-        {/* <MainContainer
+        <MainContainer
           title="About"
           sectionName="About"
-          component={""}
-        /> */}
+          component={TitleCard}
+        />
 
       </section>
     </div>
