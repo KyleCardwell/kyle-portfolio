@@ -33,28 +33,32 @@ const Typewriter = (props) => {
     //typewriting
     useEffect(() => {
 
-        if (index === words.length - 1 && subIndex === 0 && reverse) {
-            setReverse(false)
-            setIndex(0)
+        if (index === words.length - 1 && subIndex < 0 && reverse) {
+            setTimeout(() => {
+                setReverse(false)
+                setIndex(0)
+            }, 300)
             return
         }
 
         if (index < words.length && subIndex === words[index].topic.length && !reverse) {
             setTimeout(() => {
                 setReverse(true)
-            }, 3000)
+            }, 2250)
             return
         }
 
-        if (index < words.length && subIndex === 0 && reverse) {
-            setReverse(false)
-            setIndex(index + 1)
+        if (index < words.length && subIndex < 0 && reverse) {
+            setTimeout(() => {
+                setReverse(false)
+                setIndex(index + 1)
+            }, 300)
             return
         }
 
         const interval = setInterval(() => {
             setSubIndex(subIndex + (reverse ? -1 : 1))
-        }, 200)
+        }, Math.random() * (150 - 75) + 75)
 
         return () => clearInterval(interval)
     }, [subIndex, index, reverse])
