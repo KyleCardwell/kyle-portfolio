@@ -11,7 +11,7 @@ const words = [
     },
     {
         topic:"websites.",
-        message:"That's probably why you're at my site..."
+        message:"That's probably why you're here, huh?"
     },
 ]
 
