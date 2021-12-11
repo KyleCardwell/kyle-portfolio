@@ -24,25 +24,25 @@ export default function SidebarMenuSide(props) {
         </a>
         <nav className="text-right">
           <a
-            href="#Top"
+            href="#top"
             className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
           >
             Home
           </a>
           <a
-            href="#Projects"
+            href="#projects"
             className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
           >
             Projects
           </a>
           <a
-            href="#About"
+            href="#about"
             className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
           >
             About
           </a>
           <a
-            href="#Contact"
+            href="#contact"
             className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400"
           >
             Contact

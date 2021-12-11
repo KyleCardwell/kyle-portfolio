@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import './App.css';
 import MainContainer from './components/MainContainer';
 import { projectData } from './components/projectData';
@@ -6,11 +6,20 @@ import ProjectsScroll from './components/ProjectsScroll';
 import MobileMenuTop from './components/SideBarMenu/MobileMenuTop';
 import SidebarMenuSide from './components/SideBarMenu/SidebarMenuSide';
 import TitleCard from './components/TitleCard';
-import * as Scroll from 'react-scroll'
+import useElementOnScreen from './hooks/useElementOnScreen';
 
 function App() {
 
   const [showSideBar, setShowSideBar] = useState(true)
+  const [bgColor, setbgColor] = useState('bg-blue-800')
+
+  // const targetRef = useRef(null)
+  // const isVisible = useElementOnScreen({
+  //   root: null,
+  //   rootMargin: '0px',
+  //   threshold: 0
+  // }, targetRef)
+
 
   const toggleSideMenu = () => {
     setShowSideBar(!showSideBar)
@@ -24,6 +33,7 @@ function App() {
 
       <SidebarMenuSide 
         showSideBar={showSideBar}
+        bgColor={bgColor}
         />
       <MobileMenuTop
         showSideBar={showSideBar}
@@ -34,18 +44,18 @@ function App() {
 
         <MainContainer
           title="Kyle Cardwell"
-          sectionName="Top"
+          sectionName="top"
           component={TitleCard}
         />
         <MainContainer
           title="Projects"
-          sectionName="Projects"
+          sectionName="projects"
           data={projectData}
           component={ProjectsScroll}
         />
         <MainContainer
           title="About"
-          sectionName="About"
+          sectionName="about"
           component={TitleCard}
         />
 
