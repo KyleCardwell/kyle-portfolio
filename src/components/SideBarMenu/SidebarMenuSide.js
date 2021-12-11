@@ -20,7 +20,7 @@ export default function SidebarMenuSide(props) {
               d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
             />
           </svg>
-          <span className="text-2xl font-bold">Kyle's Menu</span>
+          <span className="pr-2.5 text-2xl font-bold text-right w-full">Menu</span>
         </a>
         <nav className="text-right">
           <a
@@ -48,6 +48,13 @@ export default function SidebarMenuSide(props) {
             Contact
           </a>
         </nav>
+
+        <div className="border-b-2"></div>
+
+        <section className="text-right">
+          <a href="https://github.com/KyleCardwell" className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400">GitHub</a>
+          <a href="https://www.linkedin.com/in/kyle-cardwell/" className="block py-2.5 px-4 transition duration-200 hover:bg-blue-400">LinkedIn</a>
+        </section>
       </div>
   );
 }
