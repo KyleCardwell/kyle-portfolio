@@ -19,10 +19,16 @@ function App() {
   //   rootMargin: '0px',
   //   threshold: 0
   // }, targetRef)
-
-
+  
   const toggleSideMenu = () => {
     setShowSideBar(!showSideBar)
+  }
+  
+  
+  const scrollRefs = {
+    top: useRef(),
+    projects: useRef(),
+    about: useRef()
   }
 
 
@@ -46,17 +52,20 @@ function App() {
           title="Kyle Cardwell"
           sectionName="top"
           component={TitleCard}
+          scrollRef={scrollRefs.top} 
         />
         <MainContainer
           title="Projects"
           sectionName="projects"
           data={projectData}
           component={ProjectsScroll}
+          scrollRef={scrollRefs.projects}
         />
         <MainContainer
           title="About"
           sectionName="about"
           component={TitleCard}
+          scrollRef={scrollRefs.about}
         />
 
       </section>

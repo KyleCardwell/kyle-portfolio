@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 
 const useElementOnScreen = (options, targetRef) => {
 
@@ -18,7 +18,6 @@ const useElementOnScreen = (options, targetRef) => {
       const observer = new IntersectionObserver(callbackFunction, optionsMemo)
       const currentTarget = targetRef.current
       if (currentTarget) observer.observe(currentTarget)
-      console.log(targetRef)
       
       return () => {
         if(currentTarget) observer.unobserve(currentTarget)
