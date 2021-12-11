@@ -2,7 +2,6 @@ import React from 'react';
 
 const DisplayCard = (props) => {
 
-    console.log(props)
     return (
 
         <div className="h-full w-screen md:w-2/3 flex-1 flex overflow-hidden">
