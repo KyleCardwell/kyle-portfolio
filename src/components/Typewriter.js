@@ -22,6 +22,8 @@ const Typewriter = (props) => {
     const [subIndex, setSubIndex] = useState(0);
     const [reverse, setReverse] = useState(false);
     const [blink, setBlink] = useState(true); 
+    const [messageIndex, setMessageIndex] = useState(0);
+    const [mesReverse, setMesReverse] = useState(false)
 
     //blinking cursor
     useEffect(() => {
@@ -79,7 +81,7 @@ const Typewriter = (props) => {
                 </h2>
         
             </div>
-            <div className="text-center text-2xl md:text-3xl pt-5 h-2.5 transition duration-200 ease-in-out">
+            <div className="text-center text-2xl md:text-3xl pt-5 h-2.5">
                 {subIndex === words[index].topic.length ? `(${words[index].message})` : " " }
             </div>
             
