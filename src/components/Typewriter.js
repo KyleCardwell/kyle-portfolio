@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 
 const words = [
     {
@@ -21,6 +22,8 @@ const Typewriter = (props) => {
     const [subIndex, setSubIndex] = useState(0);
     const [reverse, setReverse] = useState(false);
     const [blink, setBlink] = useState(true); 
+    const [messageIndex, setMessageIndex] = useState(0);
+    const [mesReverse, setMesReverse] = useState(false)
 
     //blinking cursor
     useEffect(() => {
@@ -64,7 +67,7 @@ const Typewriter = (props) => {
     }, [subIndex, index, reverse])
 
     return(
-        <div className="w-full">
+        <div className={"w-full" + " text-" + props.colorScheme.textColor}>
 
             <div className="flex w-full text-3xl md:text-6xl">
                 <div className="w-1/2 text-right">
@@ -86,4 +89,10 @@ const Typewriter = (props) => {
     )
 }
 
-export default Typewriter
+const mapStateToProps = state => {
+    return({
+      colorScheme: state.colorScheme
+    })
+  }
+  
+  export default connect(mapStateToProps)(Typewriter);

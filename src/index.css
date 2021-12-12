@@ -29,3 +29,25 @@ code {
     scroll-snap-align: start;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  
+  .sectionTitle {
+    position: absolute;
+    transform: translateX(-39px) translateY(30px) rotate(-90deg);
+    transform-origin: right;
+    top: 0;
+    right: 0;
+    font-size: 6rem;
+    width: fit-content;
+    white-space: nowrap;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .sectionTitleText {
+    transform: translateY(6px);
+  }
+}
