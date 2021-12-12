@@ -6,6 +6,7 @@ import { setActiveContainer, setColors } from '../actions';
 import { connect } from 'react-redux';
 
 const MainContainer = (props) => {
+    
 
     const isVisible = useElementOnScreen({
         root: null,

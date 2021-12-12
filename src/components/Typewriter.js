@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 
 const words = [
     {
@@ -64,7 +65,7 @@ const Typewriter = (props) => {
     }, [subIndex, index, reverse])
 
     return(
-        <div className="w-full">
+        <div className={"w-full" + " text-" + props.colorScheme.textColor}>
 
             <div className="flex w-full text-3xl md:text-6xl">
                 <div className="w-1/2 text-right">
@@ -78,7 +79,7 @@ const Typewriter = (props) => {
                 </h2>
         
             </div>
-            <div className="text-center text-2xl md:text-3xl pt-5 h-2.5">
+            <div className="text-center text-2xl md:text-3xl pt-5 h-2.5 transition duration-200 ease-in-out">
                 {subIndex === words[index].topic.length ? `(${words[index].message})` : " " }
             </div>
             
@@ -86,4 +87,10 @@ const Typewriter = (props) => {
     )
 }
 
-export default Typewriter
+const mapStateToProps = state => {
+    return({
+      colorScheme: state.colorScheme
+    })
+  }
+  
+  export default connect(mapStateToProps)(Typewriter);

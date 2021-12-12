@@ -1,18 +1,15 @@
 import React from "react";
+import { connect } from 'react-redux'
 
-export default function MobileMenuTop(props) {
-  //   const sidebar = document.querySelector('.sidebar')
+function MobileMenuTop(props) {
 
-  //   const handleClick = () => {
-  //     sidebar.classList.toggle("-translate-x-full")
-  //   }
 
   
   return (
     //   {/* Mobile Menu Top Bar */}
-    <div className="bg-gray-800 text-gray-100 flex justify-between md:hidden">
+    <div className={"flex justify-between md:hidden" + ' bg-' + props.colorScheme.background + " text-" + props.colorScheme.textColor}>
       {/* logo */}
-      <a href="#" className="block p-4 text-white font-bold">
+      <a href="#" className={"block p-4 font-bold" + " text-" + (props.activeContainer === 'top' ? props.colorScheme.background : props.colorScheme.textColor)}>
         Kyle Cardwell
       </a>
 
@@ -39,3 +36,12 @@ export default function MobileMenuTop(props) {
     </div>
   );
 }
+
+const mapStateToProps = state => {
+  return({
+    colorScheme: state.colorScheme,
+    activeContainer: state.activeContainer
+  })
+}
+
+export default connect(mapStateToProps)(MobileMenuTop);

@@ -46,8 +46,8 @@ function App(props) {
           component={TitleCard}
           scrollRef={scrollRefs.top}
           colors={{
-            textColor: 'text-amber-00',
-            background: 'bg-blue-700'
+            textColor: 'yellow-400',
+            background: 'gray-700'
           }}
         />
         <MainContainer
@@ -57,8 +57,8 @@ function App(props) {
           component={ProjectsScroll}
           scrollRef={scrollRefs.projects}
           colors={{
-            textColor: 'text-lime-400',
-            background: 'bg-lime-700'
+            textColor: 'green-300',
+            background: 'green-700'
           }}
         />
         <MainContainer
@@ -67,8 +67,8 @@ function App(props) {
           component={TitleCard}
           scrollRef={scrollRefs.about}
           colors={{
-            textColor: 'text-emerald-400',
-            background: ''
+            textColor: 'blue-400',
+            background: 'blue-800'
           }}
         />
 
