@@ -2,7 +2,7 @@ import React from "react";
 
 const ProjectsScroll = (props) => {
   return (
-    <div className="pt-18 flex-1 flex flex-col overflow-y-scroll items-center bg-green-400 snap snap-y snap-mandatory">
+    <div className="pt-18 flex-1 flex flex-col overflow-y-scroll items-center snap snap-y snap-mandatory">
 
       {props.data
         ? props.data.map((proj) => {

@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 import MainContainer from './components/MainContainer';
 import { projectData } from './components/projectData';
@@ -6,24 +7,14 @@ import ProjectsScroll from './components/ProjectsScroll';
 import MobileMenuTop from './components/SideBarMenu/MobileMenuTop';
 import SidebarMenuSide from './components/SideBarMenu/SidebarMenuSide';
 import TitleCard from './components/TitleCard';
-import useElementOnScreen from './hooks/useElementOnScreen';
 
-function App() {
+function App(props) {
 
   const [showSideBar, setShowSideBar] = useState(true)
-  const [bgColor, setbgColor] = useState('bg-blue-800')
-
-  // const targetRef = useRef(null)
-  // const isVisible = useElementOnScreen({
-  //   root: null,
-  //   rootMargin: '0px',
-  //   threshold: 0
-  // }, targetRef)
   
   const toggleSideMenu = () => {
     setShowSideBar(!showSideBar)
-  }
-  
+  }  
   
   const scrollRefs = {
     top: useRef(),
@@ -33,17 +24,18 @@ function App() {
 
 
   return (
-    // <div className="flex flex-col h-screen">
-    // <div className="flex-col md:flex"> <-----Original
+
     <div className="relative min-h-screen md:flex">
 
       <SidebarMenuSide 
         showSideBar={showSideBar}
-        bgColor={bgColor}
+        colors={props.colorScheme}
         />
+
       <MobileMenuTop
         showSideBar={showSideBar}
-        toggleSideMenu={toggleSideMenu}      
+        toggleSideMenu={toggleSideMenu}
+        colors={props.colorScheme}      
       />
 
       <section className="max-h-screen overflow-y-scroll snap snap-y snap-mandatory">
@@ -52,7 +44,11 @@ function App() {
           title="Kyle Cardwell"
           sectionName="top"
           component={TitleCard}
-          scrollRef={scrollRefs.top} 
+          scrollRef={scrollRefs.top}
+          colors={{
+            textColor: 'text-amber-00',
+            background: 'bg-blue-700'
+          }}
         />
         <MainContainer
           title="Projects"
@@ -60,12 +56,20 @@ function App() {
           data={projectData}
           component={ProjectsScroll}
           scrollRef={scrollRefs.projects}
+          colors={{
+            textColor: 'text-lime-400',
+            background: 'bg-lime-700'
+          }}
         />
         <MainContainer
           title="About"
           sectionName="about"
           component={TitleCard}
           scrollRef={scrollRefs.about}
+          colors={{
+            textColor: 'text-emerald-400',
+            background: ''
+          }}
         />
 
       </section>
@@ -73,4 +77,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return({
+    colorScheme: state.colorScheme
+  })
+}
+
+export default connect(mapStateToProps)(App);
