@@ -7,7 +7,7 @@ function MobileMenuTop(props) {
   
   return (
     //   {/* Mobile Menu Top Bar */}
-    <div className={"flex justify-between md:hidden" + ' bg-' + props.colorScheme.background + " text-" + props.colorScheme.textColor}>
+    <div className={"flex justify-between z-40 fixed w-screen md:hidden" + ' bg-' + props.colorScheme.background + " text-" + props.colorScheme.textColor}>
       {/* logo */}
       <a href="#" className={"block p-4 font-bold" + " text-" + (props.activeContainer === 'top' ? props.colorScheme.background : props.colorScheme.textColor)}>
         Kyle Cardwell
