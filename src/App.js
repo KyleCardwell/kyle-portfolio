@@ -29,6 +29,7 @@ function App(props) {
 
       <SidebarMenuSide 
         showSideBar={showSideBar}
+        toggleSideMenu={toggleSideMenu}
         colors={props.colorScheme}
         />
 
@@ -68,7 +69,7 @@ function App(props) {
           scrollRef={scrollRefs.about}
           colors={{
             textColor: 'lime-800',
-            background: 'lime-300'
+            background: 'lime-300', 
           }}
         />
 
