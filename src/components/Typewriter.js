@@ -68,21 +68,23 @@ const Typewriter = (props) => {
 
     return(
         <div className={"w-full" + " text-" + props.colorScheme.textColor}>
+            <div className="transform -translate-y-28 md:transform-none">
+                <div className="flex w-full text-3xl md:text-6xl">
+                    <div className="w-1/2 text-right">
+                        <h2>
+                            I build&nbsp;
+                        </h2>
 
-            <div className="flex w-full text-3xl md:text-6xl">
-                <div className="w-1/2 text-right">
+                    </div>
                     <h2>
-                        I build&nbsp;
+                        {`${words[index].topic.substring(0, subIndex + 1)}${blink ? "|" : ""}`}
                     </h2>
-
+            
                 </div>
-                <h2>
-                    {`${words[index].topic.substring(0, subIndex + 1)}${blink ? "|" : ""}`}
-                </h2>
-        
-            </div>
-            <div className="text-center text-2xl md:text-3xl pt-5 h-2.5">
-                {subIndex === words[index].topic.length ? `(${words[index].message})` : " " }
+                <div className="text-center text-2xl md:text-3xl pt-5 h-2.5">
+                    {subIndex === words[index].topic.length ? `(${words[index].message})` : " " }
+                </div>
+
             </div>
             
         </div>

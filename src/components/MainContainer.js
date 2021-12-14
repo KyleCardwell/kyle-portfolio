@@ -11,7 +11,7 @@ const MainContainer = (props) => {
     const isVisible = useElementOnScreen({
         root: null,
         rootMargin: '0px',
-        threshold: .2
+        threshold: .6
       }, props.scrollRef)
 
     useEffect(() => {
