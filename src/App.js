@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
+import AboutCard from './components/AboutCard';
 import MainContainer from './components/MainContainer';
 import { projectData } from './components/projectData';
 import ProjectsScroll from './components/ProjectsScroll';
@@ -25,7 +26,7 @@ function App(props) {
 
   return (
 
-    <div className="relative min-h-screen md:flex">
+    <div className="relative min-h-screen md:flex font-sans">
 
       <SidebarMenuSide 
         showSideBar={showSideBar}
@@ -63,9 +64,9 @@ function App(props) {
           }}
         />
         <MainContainer
-          title="About"
+          title="About Me"
           sectionName="about"
-          component={TitleCard}
+          component={AboutCard}
           scrollRef={scrollRefs.about}
           colors={{
             textColor: 'lime-800',
