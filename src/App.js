@@ -69,8 +69,8 @@ function App(props) {
           component={AboutCard}
           scrollRef={scrollRefs.about}
           colors={{
-            textColor: 'lime-800',
-            background: 'lime-300', 
+            textColor: 'lime-400',
+            background: 'sky-800', 
           }}
         />
 
