@@ -63,8 +63,52 @@ const Typewriter = (props) => {
             setSubIndex(subIndex + (reverse ? -1 : 1))
         }, Math.random() * (150 - 75) + 75)
 
+        
         return () => clearInterval(interval)
+
     }, [subIndex, index, reverse])
+
+    
+    // useEffect(() => {
+
+        
+    //     if (subIndex === words[index].topic.length && messageIndex <= 0 && mesReverse) {
+    //         setMesReverse(false)
+    //         return
+    //     }
+        
+    //     if (messageIndex === words[index].message.length && !mesReverse) {
+    //         setTimeout(() => {
+
+    //             setMesReverse(true)
+
+    //         }, 1000)
+
+    //         return
+    //     }
+
+        
+    //     const intervalMessage = setInterval(() => {
+
+    //         let counter = 0
+    //         let complete = 0
+
+    //         if (reverse && messageIndex === 0) {
+    //             counter = 0
+    //             complete = 1
+    //         } else if (complete !== 1 && messageIndex > 0 && mesReverse) {
+    //             counter = -1
+    //         } else if (complete !== 1 && messageIndex < words[index].message.length && !mesReverse) {
+    //             counter = 1
+    //         }
+    //         // setMessageIndex(messageIndex + (mesReverse && messageIndex > 0 ? -1 : messageIndex < words[index].message.length ? 1 : 0))
+    //         setMessageIndex(messageIndex + counter)
+    //     }, 5)
+        
+    //     return () => clearInterval(intervalMessage)
+
+    // }, [subIndex, messageIndex, mesReverse])
+
 
     return(
         <div className={"w-full" + " text-" + props.colorScheme.textColor}>
@@ -82,7 +126,8 @@ const Typewriter = (props) => {
             
                 </div>
                 <div className="text-center text-2xl md:text-3xl pt-5 h-2.5">
-                    {subIndex === words[index].topic.length ? `(${words[index].message})` : " " }
+                    {subIndex === words[index].topic.length ? `(${words[index].message})` : "" }
+                    {/* {subIndex === words[index].topic.length ? `(${words[index].message.substring(0, messageIndex + 1)})` : "" } */}
                 </div>
 
             </div>
