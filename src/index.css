@@ -11,6 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -34,11 +37,15 @@ code {
   
   .sectionTitle {
     position: absolute;
-    transform: translateX(-39px) translateY(30px) rotate(-90deg);
+    transform: translateX(-2.6vh) translateY(30px) rotate(-90deg);
+    /* transform: translateY(30px) rotate(-90deg); */
     transform-origin: right;
+    text-align: center;
     top: 0;
     right: 0;
-    font-size: 6rem;
+    height: 8vh;
+    font-size: 8vh;
+    line-height: 8vh;
     width: fit-content;
     white-space: nowrap;
   }
@@ -48,6 +55,6 @@ code {
 @media only screen and (max-width: 768px) {
 
   .sectionTitleText {
-    transform: translateY(6px);
+    transform: translateY(8px);
   }
 }

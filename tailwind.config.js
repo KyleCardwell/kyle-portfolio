@@ -3,7 +3,11 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        titles: ['Karla']
+      }
+    },
     minHeight: {
       '0': '0',
       '1/4': '25%',
