@@ -28,7 +28,7 @@ const MainContainer = (props) => {
 
     return (
         <div
-            className={`${props.sectionName} h-screen md:flex snap-start`}
+            className={`${props.sectionName} h-screen md:flex snap-start font-titles`}
             id={props.sectionName}
             ref={props.scrollRef}
         >
