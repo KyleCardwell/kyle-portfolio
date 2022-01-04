@@ -96,7 +96,7 @@ const Typewriter = (props) => {
                 counter = 1
             }
             setMessageIndex(messageIndex + counter)
-            console.log(messageIndex)
+            // console.log(messageIndex)
         }, 6)
 
         
