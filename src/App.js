@@ -59,8 +59,8 @@ function App(props) {
           component={ProjectsScroll}
           scrollRef={scrollRefs.projects}
           colors={{
-            textColor: 'green-300',
-            background: 'green-700'
+            textColor: 'emerald-900',
+            background: 'emerald-300'
           }}
         />
         <MainContainer
