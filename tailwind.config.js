@@ -6,7 +6,21 @@ module.exports = {
     extend: {
       fontFamily: {
         titles: ['Karla']
-      }
+      },
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        slate: colors.slate,
+        emerald: colors.emerald,
+        indigo: colors.indigo,
+        yellow: colors.yellow,
+        lime: colors.lime,
+        green: colors.green,
+        emerald: colors.emerald,
+        sky: colors.sky,
+        amber: colors.amber,
+        
+      },
     },
     minHeight: {
       '0': '0',
@@ -17,20 +31,7 @@ module.exports = {
       'full': '100%',
       '20': '20px',
      },
-     colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      black: colors.black,
-      white: colors.white,
-      gray: colors.gray,
-      emerald: colors.emerald,
-      indigo: colors.indigo,
-      yellow: colors.yellow,
-      lime: colors.lime,
-      green: colors.green,
-      sky: colors.sky,
-      
-    },
+     
   },
   plugins: [],
 }
