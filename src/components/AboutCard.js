@@ -12,15 +12,13 @@ const AboutCard = (props) => {
 
                 <p className="text-xl md:text-2xl whitespace-pre-wrap">
 
-                    {`If I can think it, I can make it!  That's the mindset I had while playing with LEGO as a kid (and, let's be real, probably yesterday).  It's the same mindset that carried me through my Industrial Design program at BYU.  And it's the mindset that motivated me to become a full-stack web developer.`}
+                    {`I'm a full-stack web developer with a background in furniture manufacturing. I have always kept the attitude and belief that, "If I can think it, I can make it!" That's the mindset I had while playing with LEGO as a kid (and, let's be real, probably yesterday). It's the same mindset that carried me through the Industrial Design program at BYU. And it's the mindset that motivated me to actually become a full-stack web developer.`}
 
                     <br />
                     <br />
                                         
                     {`I have always liked making useful things.  Now I do that with code.`}
                 </p>
- 
-                    {/* I've been told I'm "too damn efficient." */}
                                         
             </div>
         </section>
